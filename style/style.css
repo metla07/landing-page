@@ -1,3 +1,4 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +30,7 @@ header {
     margin-left: 70px;
 }
 
-header h1 {
+header h2 {
     font-family: Arial;
     color: #ffffff;
     font-size: 60px;
@@ -85,6 +86,7 @@ header ul li {
     flex-flow: wrap;
     justify-content: space-around;
     background: #FCFCFC;
+    position: relative;
 }
 
 .conteyner_produkt .produkt {
@@ -119,8 +121,8 @@ header ul li {
 
 .blok_video {
     background-color: #445161;
-    width: 430px;
-    height: 244px;
+    width: 455px;
+    height: 245px;
     margin-top: 50px;
     margin-bottom: 40px;
 }
@@ -159,6 +161,7 @@ header ul li {
 .details {
     position: relative;
     width: 500px;
+    display: block;
 }
 
 .details[open] .summary_01::before {
@@ -172,11 +175,13 @@ header ul li {
     font-size: 26px;
     cursor: pointer;
     padding-left: 100px;
+    display: block;
 }
 
 .details p {
     padding: 10px 0 0 100px;
     margin-bottom: 10px;
+    color: #fff;
 }
 
 .summary_01::-webkit-details-marker {
@@ -293,25 +298,27 @@ header ul li {
     height: 150px;
     display: flex;
     margin-bottom: 10px;
+    margin-right: 50px;
 }
 
 .box44_img {
     display: block;
-    width: 105px;
+    width: 80px;
     height: 80px;
-    margin: 5px 25px 0 0;
+    margin: 5px 15px 0 0;
+    border-radius: 50%;
 }
 
 .box44_foto {
     width: 483px;
     height: 121px;
     background: #EBEBEB;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid #EBEBEB;
     position: relative;
 }
 
-.box44_foto::before {
+.box44_foto:before {
     display: block;
     position: absolute;
     content: "";
@@ -375,10 +382,11 @@ header ul li {
 
 .box_buy {
     width: 300px;
-    border: 1px solid #000;
+    border: 1px solid #435061;
     flex-shrink: 0;
     border-radius: 5px;
     margin: 15px 5px;
+    background: #414F61;
 }
 
 .Standart {
@@ -394,10 +402,11 @@ header ul li {
     text-align: center;
     height: 50px;
     line-height: 50px;
+    width: 298px;
 }
 
 .a100 {
-    width: 300px;
+    width: 299px;
     height: 71px;
     display: block;
     font-family: Arial;
@@ -407,22 +416,17 @@ header ul li {
     line-height: 30px;
     text-align: center;
     line-height: 70px;
+    background-color: #FCFCFC;
 }
 
-.list1 {
+.list_1 {
     background: #414F61;
-    padding-left: 10px;
-    padding-top: 5px;
+    padding: 5px 0 0 25px;
+    width: 270px;
     height: 100%;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-}
-
-.list {
-    padding-left: 30px;
-}
-
-.list ol li {
+    display: block;
     font-family: Arial;
     color: #ffffff;
     font-size: 14px;
@@ -432,15 +436,10 @@ header ul li {
 }
 
 .input_1 {
-    background-color: #435061;
-    padding-bottom: 10px;
     border-radius: 10px;
     margin: 20px 0;
     text-transform: uppercase;
     cursor: pointer;
-}
-
-.input_01 {
     display: block;
     padding: 0px 0px 0px 0px;
     background-color: #ffffff;
@@ -448,16 +447,15 @@ header ul li {
     height: 40px;
     line-height: 40px;
     text-align: center;
-    border-radius: 10px;
-    margin-left: -10px;
+    margin-left: 20px;
     outline: none;
 }
 
-.input_01:hover {
+.input_1:hover {
     box-shadow: 0px 0px 10px 1px #fff;
 }
 
-.input_01:active {
+.input_1:active {
     box-shadow: none;
     background-color: #ccc;
 }
@@ -498,13 +496,24 @@ footer .contact_span {
     min-height: 400px;
 }
 
+fieldset {
+    margin-right: 0px;
+    padding: 10px 0 0 30px;
+    margin-bottom: 50px;
+    border: 2px solid #fff;
+}
+
+legend {
+    font-size: 20px;
+    color: #fff;
+}
+
 .forma {
     height: 400px;
     width: 550px;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    margin-bottom: 50px;
 }
 
 .box_foot {
@@ -517,6 +526,17 @@ footer .contact_span {
     font-weight: 700;
     cursor: pointer;
     outline: none;
+    -moz-outline: none;
+    border: none;
+}
+
+input:required {
+    box-shadow: none;
+    border: none;
+}
+
+input:invalid {
+    box-shadow: 0 0 0 #fff;
 }
 
 .box_foot1 {
@@ -524,8 +544,8 @@ footer .contact_span {
 }
 
 .box_foot1:focus {
-    outline: 5px solid #fff;
     border-radius: 0px;
+    outline: 5px solid #fff;
 }
 
 .box_foot2 {
@@ -533,8 +553,8 @@ footer .contact_span {
 }
 
 .box_foot2:focus {
-    outline: 5px solid #fff;
     border-radius: 0px;
+    outline: 5px solid #fff;
 }
 
 textarea {
@@ -545,6 +565,13 @@ textarea {
     border-radius: 5px;
     font-size: 18px;
     font-weight: 900;
+    resize: none;
+    outline: none;
+    border: none;
+}
+
+textarea:invalid {
+    box-shadow: 0 0 2px #fff;
 }
 
 textarea:focus {
@@ -583,7 +610,6 @@ textarea:focus {
 
 .box_foot_ul_li ul li {
     height: 34px;
-    line-height: 34px;
     list-style-type: none;
     margin-bottom: 15px;
     margin-left: 15px;
@@ -594,17 +620,16 @@ textarea:focus {
 }
 
 .box_foot_ul_li a:hover {
-    color: silver;
+    color: gold;
 }
 
 .box_foot_ul_li a {
     font-family: Arial;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
-    line-height: 24px;
     text-align: left;
-    padding: 5px 35px;
+    padding-left: 5px;
     height: 30px;
 }
 
@@ -624,48 +649,90 @@ textarea:focus {
 }
 
 .box_socsety01 {
-    background: url(../image/tviter.jpg) no-repeat 50% 50%;
     background-color: #fff;
+}
+
+.box_socsety01 i {
+    font-family: fontawesome !important;
+    margin-left: 12px;
+    margin-top: 12px;
+    color: #435061;
 }
 
 .box_socsety02 {
-    background: url(../image/fb.jpg) no-repeat 50% 50%;
     background-color: #fff;
+}
+
+.box_socsety02 i {
+    font-family: fontawesome !important;
+    margin-left: 14px;
+    margin-top: 12px;
+    color: #435061;
+}
+
+.awesome i:hover {
+    color: gold;
 }
 
 .box_socsety03 {
-    background: url(../image/in.jpg) no-repeat 50% 50%;
     background-color: #fff;
+}
+
+.box_socsety03 i {
+    font-family: fontawesome !important;
+    margin-left: 12px;
+    margin-top: 10px;
+    color: #435061;
+    font-weight: 100;
 }
 
 .box_socsety04 {
-    background: url(../image/google.jpg) no-repeat 40% 50%;
     background-color: #fff;
 }
 
+.box_socsety04 i {
+    font-family: fontawesome !important;
+    margin-left: 8px;
+    margin-top: 10px;
+    color: #435061;
+}
+
 .box_socsety05 {
-    background: url(../image/you%20tube.jpg) no-repeat 40% 50%;
     background-color: #fff;
+}
+
+.box_socsety05 i {
+    font-family: fontawesome !important;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #435061;
+    font-weight: 100;
 }
 
 .box_hover:hover {
     box-shadow: 0px 0px 10px 1px #fff;
 }
 
-#li1 {
-    background: url(../image/skayp.jpg) no-repeat 0.5% 20%;
+#li_1 i {
+    color: #fff;
+    font-family: fontawesome !important;
+    font-weight: 100;
 }
 
-#li2 {
-    background: url(../image/asq.jpg) no-repeat 0% 0%;
+#li_2 i {
+    color: #fff;
+    font-family: fontawesome !important;
+    font-weight: 100;
 }
 
-#li3 {
-    background: url(../image/mail.jpg) no-repeat 1% 40%;
+#li_3 {
+    color: #fff;
+    font-weight: 100;
 }
 
-#li4 {
-    background: url(../image/phone.jpg) no-repeat 1% 20%;
+#li_4 {
+    color: #fff;
+    font-weight: 100;
 }
 
 
@@ -689,4 +756,13 @@ textarea:focus {
     font-weight: 400;
     letter-spacing: 0.3px;
     line-height: 24px;
+}
+
+.multi_bg_example {
+    width: 100%;
+    min-height: 400px;
+    background: url(https://mdn.mozillademos.org/files/11307/bubbles.png), -webkit-linear-gradient(left, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: bottom right, left, right;
+    background: -moz-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), -webkit-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), -ms-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
 }
